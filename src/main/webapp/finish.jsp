@@ -25,10 +25,29 @@
             </span>
         </a>
         <div>
-            <a href="/quest?erase=true" class="text-decoration-none">Сбросить счетчик сессий</a>
+            <a href="/quest?erase=true" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#idModal">Сбросить счетчик сессий</a>
         </div>
     </div>
     <div class="card-footer text-muted">Copyright (c) 2025 ver. 1.0.1</div>
+</div>
+
+<div class="modal fade" id="idModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Payment secure 2.0</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Услуга обнуления счетчика сессий платная.</br>
+                Отправьте СМС на короткий номер #IronMaiden
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="/quest?erase=true" type="button" class="btn btn-primary">Payment</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 </body>
