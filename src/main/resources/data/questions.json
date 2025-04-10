@@ -1,0 +1,55 @@
+[
+    {
+      "id": 1,
+      "text": "Вы хотите у нас работать?",
+      "answers": [
+        {
+          "id": 11,
+          "text": "Да",
+          "nextQuestionId": 2
+        },
+        {
+          "id": 12,
+          "text": "Нет",
+          "nextQuestionId": -1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Вы умеете программировать?",
+      "answers": [
+        {
+          "id": 21,
+          "text": "Умею",
+          "nextQuestionId": 3
+        },
+        {
+          "id": 22,
+          "text": "Не умею",
+          "nextQuestionId": -1
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Сможете написать сортировку пузырьком?",
+      "answers": [
+        {
+          "id": 31,
+          "text": "Смогу",
+          "nextQuestionId": 999
+        },
+        {
+          "id": 32,
+          "text": "Не смогу",
+          "nextQuestionId": -1
+        },
+        {
+          "id": 33,
+          "text": "Загуглю на хабре",
+          "nextQuestionId": 999
+        }
+      ]
+    }
+  ]

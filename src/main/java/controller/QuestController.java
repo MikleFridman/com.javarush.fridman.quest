@@ -24,11 +24,11 @@ public class QuestController extends HttpServlet {
         questionService = new QuestionService();
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         long id = request.getParameter("id") == null ? 1 : Long.parseLong(request.getParameter("id"));
         if (id < 0 || id == 999) {
             request.setAttribute("result", id);
-            getServletContext().getRequestDispatcher("/finish.jsp").forward(request, response);
+            request.getRequestDispatcher("/finish.jsp").forward(request, response);
         }
         HttpSession session = request.getSession();
         int counter = session.getAttribute("counter") == null ? 0 : (int) session.getAttribute("counter");
@@ -44,7 +44,7 @@ public class QuestController extends HttpServlet {
         if (question != null) {
             request.setAttribute("question", question);
             request.setAttribute("answers", questionService.getAnswerList(question));
-            getServletContext().getRequestDispatcher("/quest.jsp").forward(request, response);
+            request.getRequestDispatcher("/quest.jsp").forward(request, response);
         }
     }
 }
